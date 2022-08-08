@@ -199,9 +199,6 @@ params:
       - title: Hugo Profile
         content: A highly customizable and mobile first Hugo template for personal portfolio and blog.
         image: /images/projects/profile.png
-        featured:
-          name: Demo
-          link: http://localhost:1313/projects/project1
         # badges:
         #   - "Hugo"
         #   - "Bootstrap"
