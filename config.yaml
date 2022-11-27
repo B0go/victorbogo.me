@@ -30,10 +30,12 @@ params:
       #secondaryColor: "#ff0000"
 
   title: "Victor Bogo"
-  description: Test
+  description: Bogo's personal website
   useBootstrapCDN: false
   theme:
     disableThemeToggle: false
+  navbar:
+    disableSearch: true
     
   # Hero
   hero:
@@ -44,6 +46,7 @@ params:
     content: "I once read that \"Hope is not a strategy\" and since then I try to use tools and processes to improve reliability outcomes"
     image: /images/photo2.jpeg
     button:
+      download: false
       enable: true
       name: "About"
       url: "#about"
