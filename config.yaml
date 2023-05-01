@@ -36,7 +36,7 @@ params:
     disableThemeToggle: false
   navbar:
     disableSearch: true
-    
+
   # Hero
   hero:
     enable: true
@@ -83,42 +83,61 @@ params:
   # Experience
   experience:
     enable: true
+    index: false
     items:
-      - job: "Senior Site Reliability Engineer"
-        company: "Intricately - SRE"
-        companyUrl: "http://intricately.com"
-        date: "March 2022 - present"
-        featuredLink:
-          enable: false
-        content: "WIP"
+      - title: "Site Reliability Engineer"
+        company:
+          name: "37signals (Basecamp & Hey)"
+          url: "https://37signals.com"
+        date: "2022-present"
+        content: |
+          37signals is the company behind the well-known Basecamp and, more recently, Hey e-mail. It has been at the forefront of software development and remote work culture for decades and has chosen to be profitable since the 90s. Responsible for the conception of Ruby on Rails and other open-source tools, 37signals shared a lot with the community and continues to be one of the organizations that provoke changes in the industry.
 
-      - job: "Senior Site Reliability Engineer"
-        company: "Quinto Andar - SRE"
-        companyUrl: "https://www.quintoandar.com.br"
-        date: "Feb 2021 - March 2022"
-        featuredLink:
-          enable: false
-        content: "WIP"
+          Projects:
+          - Scale Prometheus monitoring in the cloud by running Thanos and its components
+          - Revamp Prometheus on-prem monitoring by recreating the whole setup
+      - title: "Senior Site Reliability Engineer"
+        company:
+          name: "Intricately Data"
+          url: "https://intricately.com"
+        date: "2022-2022"
+        content: |
+          Intricately is a data company based in the US that provides go-to-market technical information for anyone who sells products to tech companies. After a few weeks in Intricately, it got sold to HG Insights, a company in the same market.
 
-      - job: "Site Reliability Engineer"
-        company: "Pier Insurtech - SRE"
-        companyUrl: "http://pier.digital"
-        date: "Apr 2020 - Mar 2021"
+          Projects:
+          - Build terraform modules for AWS Backup and Vault monitoring
+          - Evaluate possible solutions for migrating an on-VM MongoDB to a managed solution
+          - Tackle security tasks reported by a third-party organization
+      - title: "Senior Site Reliability Engineer"
+        company:
+          name: "QuintoAndar Real Estate"
+          url: "https://www.quintoandar.com.br"
+        date: "2021-2022"
+        content: |
+          QuintoAndar is an online real estate services company similar to Airbnb but for the long term. It is the second largest startup in LatAm, just behind Nubank. It has around 300 micro-services and more than 700 Kubernetes nodes in total. It has a big SRE team (approximately 70), and I was part of the observability-focused team.
+
+          Projects:
+           - Maintain all Prometheus instances used as the primary monitoring system. Each instance ran on top of Kubernetes and had more than 4TB of data on disk.
+           - Install and configure Thanos to scale Prometheus monitoring through a lot of different Kubernetes clusters and improve how efficiently we could store monitoring data for the long-term
+      - title: "Site Reliability Engineer"
+        company:
+          name: "Pier Insurtech"
+          url: "https://pier.digital"
+        date: "2020-2021"
         content: |
           Pier is the first Brazilian Insurtech, trying to solve the problem related to the bureaucracy and lack of high granularity data-driven decision making in the insurance world. At Pier, we needed to start structuring the DevOps/SRE culture from scratch, bringing some useful practices and tools to the table like post mortems, incident response, key engineering metrics like MTTD, MTTR, success rate and latency.
 
-          Some projects that I led:
-
+          Projects:
           - Start monitoring apps using Newrelic APM
           - Build the logging stack using ElasticSearch, FluentD and Kibana
           - Define the logging pattern
           - Organize PostgreSQL replicas, users and overall maintenance
           - Secure AWS account and IAM related configuration
-
-      - job: "Site Reliability Engineer"
-        company: "ContaAzul - SRE"
-        companyUrl: "https://contaazul.com"
-        date: "Sept 2015 - Apr 2020"
+      - title: "Site Reliability Engineer"
+        company:
+          name: "ContaAzul Software"
+          url: "https://contaazul.com"
+        date: "2018 - 2020"
         content: |
           As ContaAzul's platform is cloud based, all our customers access the same production environment and the number of customers is always growing we need to understand and apply some important concepts and practices in order to improve our overall service reliability. Besides being responsible for our cloud infrastructure, the SRE team is always looking into keeping the DevOps culture warm.
 
@@ -126,22 +145,22 @@ params:
 
           - Post Mortems, to keep learning from failure
           - Automation, to scale and keep things consistent
-          - SLIs, SLOs and SLAs, to build a contract between our product and development teams seeking balance 
+          - SLIs, SLOs and SLAs, to build a contract between our product and development teams seeking balance
           - Release Engineering, to guarantee that changes to the production environment have a controlled impact
           - Monitoring, to enable true understanding of what is happening in production
 
           We currently own a self-managed Kubernetes cluster deployed to AWS responsible for running different kinds of application containers (microservices, jobs etc) and our data is mainly saved on PostgreSQL instances and S3
 
           Tech: Kubernetes, Docker, Prometheus, AWS, Grafana, Opentracing, Jaeger, Java
-
-      - job: "Software Engineer"
-        company: "ContaAzul - SWE"
-        companyUrl: "https://contaazul.com"
-        date: "Sept 2015 - Apr 2020"
+      - title: "Software Engineer"
+        company:
+          name: "ContaAzul Software"
+          url: "https://contaazul.com"
+        date: "2015 - 2018"
         content: |
           Team: Billing & Payments
 
-          Our goal is to allow any customer using ContaAzul to exchange money through our platform. 
+          Our goal is to allow any customer using ContaAzul to exchange money through our platform.
           At ContaAzul, we have a lot of specific strategies related to payments. As no available platform met our requirements we opted to build and maintain our own payments infrastructure from the UIs that allow our customers to choose and pay using their preferred payment methods to the back-end that securely calculates things like subscriptions, recharge and discounts.
 
           We have some core values respected and followed by everyone in the team:
@@ -151,35 +170,21 @@ params:
            - Testability
            - Software engineering principles
 
-          Our back-end microservices are mainly in Java (SprintBoot) and our front-end uses AngularJS with Material Design.        
-
-  # Education
-  education:
-    enable: true
-    # index: true
-    items:
-      - title: "LFS201: Essentials of Linux System Administration"
-        school:
-          name: "The Linux Foundation"
-          url: "https://www.linuxfoundation.org"
-        date: "2019-2019"
-      - title: "Systems Development and Analysis"
-        school:
-          name: "Santa Catarina State University"
-          url: "https://www.udesc.br/international"
-        date: "2014 - 2019"
-      - title: "Java Development"
-        school:
-          name: "Softmap Training"
-        date: "2014 - 2015"
-        content: |-
-          Object Oriented Programming
-          The Java Programming Language
-          Web Programming and Java for Web
-          Java Enterprise Edition(JEE)
-      - title: "Information Systems Associate"
-        school:
-          name: "Colégio Cenecista José Elias Moreira"
+          Our back-end microservices are mainly in Java (SprintBoot) and our front-end uses AngularJS with Material Design.
+      - title: "Software Engineer"
+        company:
+          name: "Softexpert Software"
+          url: "https://www.softexpert.com"
+        date: "2013 - 2015"
+        content: |
+          Specific artifact development using web technologies (HTML, JavaScript, Ext, Ajax) with Object Oriented PHP and Java back-end connected to MS SQL Server, Oracle and Postgres. Java development environment configuration with Apache Ant, Maven and Tomcat. iReport report creation and maintenance.
+      - title: "Infrastructure Intern"
+        company:
+          name: "Opentech Risk Management"
+          url: "https://opentechgr.com.br"
+        date: "2012 - 2013"
+        content: |
+          Solved hardware and software day-to-day problems. General computer maintenance (computer parts replacement, cleaning and saving). Installation and configuration of new work environments (Formatting, program installation and initial configuration). Monitoring of automated IT processes.
 
   # Achievements
   achievements:
