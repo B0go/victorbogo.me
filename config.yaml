@@ -4,7 +4,7 @@ title: "Victor Bogo"
 theme: hugo-profile
 
 Paginate: 3
-googleAnalytics: G-YBX1L97WF2
+googleAnalytics: G-X64ZSNWKDE
 
 markup:
   goldmark:
@@ -56,6 +56,10 @@ params:
           url: https://github.com/B0go
         - icon: fab fa-twitter
           url: https://twitter.com/victorbogo
+        - icon: fab fa-linkedin
+          url: https://www.linkedin.com/in/victorbogo
+        - icon: fab fa-instagram
+          url: https://www.instagram.com/victorbogo
 
   # About
   about:
